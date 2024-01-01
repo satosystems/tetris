@@ -1,8 +1,46 @@
 module Main exposing (main)
 
-import Html exposing (text)
+import Browser
+import Html exposing (Html, div, text)
 
 
-main : Html.Html msg
+type alias Flags =
+    ()
+
+
+type alias Model =
+    ()
+
+
+type alias Msg =
+    ()
+
+
+init : Flags -> ( Model, Cmd Msg )
+init flags =
+    ( (), Cmd.none )
+
+
+view : Model -> Html Msg
+view model =
+    div [] [ text "Hello, World!" ]
+
+
+update : Msg -> Model -> ( Model, Cmd Msg )
+update msg model =
+    ( model, Cmd.none )
+
+
+subscriptions : Model -> Sub Msg
+subscriptions model =
+    Sub.none
+
+
+main : Program Flags Model Msg
 main =
-    text "Hello, World!"
+    Browser.element
+        { init = init
+        , view = view
+        , update = update
+        , subscriptions = subscriptions
+        }
