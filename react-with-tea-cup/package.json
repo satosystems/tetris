@@ -39,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-tea-cup": "^2.2.3",
+    "tea-cup-core": "^2.2.3"
   }
 }
